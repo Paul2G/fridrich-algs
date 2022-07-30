@@ -1,0 +1,285 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h2 {
+  border-bottom: 1px solid gray;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+}
+
+select, option {
+  cursor: pointer;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*-----------------------------------Cajas grandes-----------------------------------------*/
+.mainContent {
+  margin: auto;
+  padding: 1rem 2rem;
+  width: 70%;
+  box-shadow: 0px 5px 10px gray;
+}
+
+@media (max-width: 992px) {
+  .mainContent {
+    width: 100%;
+  }
+}
+
+.Algs {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*---------------------------------Tarjeta de algoritmo--------------------------------*/
+
+.alg-card {
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: min-content;
+  padding: 0px 20px 10px 20px;
+  margin: 10px;
+}
+
+.alg-card .editBtn{
+  cursor: pointer;
+  background-color: rgba(0, 0, 255, 0);
+  height: 16px;
+  width: 16px;
+  
+  border: none;
+  position: relative;
+  top: 10px;
+  left: 60px;
+}
+
+.alg-card .editBtn:disabled {
+  cursor: auto;
+}
+
+.alg-card .editBtn:not(:disabled)::before {
+  content: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='black' class='bi bi-pencil' viewBox='0 0 16 16'%3E%3Cpath d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z'/%3E%3C/svg%3E");
+} 
+
+.alg-card .editBtn:not(:disabled):hover::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='black' class='bi bi-pencil-fill' viewBox='0 0 16 16'%3E%3Cpath d='M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z'/%3E%3C/svg%3E");
+}
+
+.alg-card h3 {
+  margin: 0px;
+}
+
+.alg-card.learn-state0 {
+  background-color: white;
+}
+
+.alg-card.learn-state1 {
+  background-color: lemonchiffon;
+}
+
+.alg-card.learn-state2 {
+  background-color: lightgreen;
+}
+
+.alg-card.learn-state3 {
+  background-color: lightpink;
+}
+
+.over-text{
+  height: 0;
+  text-overflow: clip;
+  pointer-events: none;
+  color: transparent;
+  font-weight: bold;
+}
+
+.alg-card .over-text {
+  font-size: small;
+  position: relative;
+  top: -4rem;
+}
+
+.case-img:hover ~ .over-text{
+  color: white;
+}
+
+/*--------------------------------Case Image-----------------------------*/
+
+.case-img {
+  cursor: pointer;
+  margin: 10px 10px;
+  width: 90px;
+  color: black;
+  transition: 0.1s;
+}
+
+.case-img:hover{
+  filter: brightness(60%);
+  transition: 0.1s;
+}
+
+.case-img.rt0 {
+  transform: rotate(0deg);
+  transition: 0.2s;
+}
+
+.case-img.rt1 {
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+
+.case-img.rt2 {
+  transform: rotate(180deg);
+  transition: 0.2s;
+}
+
+.case-img.rt3 {
+  transform: rotate(270deg);
+  transition: 0.2s;
+}
+
+/*------------------------------------Modal-----------------------------------*/
+
+.modal-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;  
+}
+
+.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal{
+  background-color: white;
+  width: 600px;
+  max-width: 100%;
+  padding: 10px 50px 30px 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.modal img {
+  margin: 10px 10px;
+  width: 150px;
+  color: black;
+}
+
+.modal .over-text {
+  font-size: medium;
+  position: relative;
+  top: -6rem;
+}
+
+.modal .close-btn {
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: larger;
+
+  position: relative;
+  top: 10px;
+  left: 53%;
+}
+
+.modal .close-btn::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-x-lg' viewBox='0 0 16 16'%3E%3Cpath d='M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z'/%3E%3C/svg%3E");;
+}
+
+.modal .add-button, .modal .del-button{
+  cursor: pointer;
+  border: 1px solid gray;
+  padding: 0.2rem;
+  border-radius: 10px;
+}
+
+.modal .add-button:hover, .modal .del-button:not(:disabled):hover{
+  background-color: rgb(220, 220, 220);
+}
+
+.modal .del-button:disabled {
+  cursor: not-allowed;
+}
+
+/*----------------------Table related---------------------------------*/
+
+.algs-table {
+  width: 100%;
+  border: 2px solid gray;
+  border-collapse: collapse;
+}
+
+.algs-table th, .algs-table td {
+  border: 1px solid gray;
+  padding: 0.2rem;
+}
+
+/*------------------------Scroll related---------------------------*/
+
+.noscroll {
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  -webkit-appearance: none; 
+}
+
+body::-webkit-scrollbar:vertical {
+  width:10px;
+}
+
+body::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+body::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: 0px 0px 2px rgb(143, 143, 143);
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}

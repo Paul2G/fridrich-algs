@@ -1,0 +1,761 @@
+[
+    {
+        "id": 0,
+        "shape": "done",
+        "algrtm": [
+            {
+                "moves": "Resuelto",
+                "rot": 0,
+                "noOfMoves": 0
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 1,
+        "shape": "dot",
+        "algrtm": [
+            {
+                "moves": "R U2 R2 F R F' U2 R' F R F'",
+                "rot": 0,
+                "noOfMoves": 11
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 2,
+        "shape": "dot",
+        "algrtm": [
+            {
+                "moves": "F (R U R' U') F' f (R U R' U') f'",
+                "rot": 0,
+                "noOfMoves": 12
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 3,
+        "shape": "dot",
+        "algrtm": [
+            {
+                "moves": "M R U R' U r U2 r' U M'",
+                "rot": 0,
+                "noOfMoves": 10
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 4,
+        "shape": "dot",
+        "algrtm": [
+            {
+                "moves": "M U' r U2 r' U' R U' R2 r",
+                "rot": 0,
+                "noOfMoves": 10
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 5,
+        "shape": "square",
+        "algrtm": [
+            {
+                "moves": "l' U2 L U L' U l",
+                "rot": 0,
+                "noOfMoves": 7
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 6,
+        "shape": "square",
+        "algrtm": [
+            {
+                "moves": "r U2 R' U' R U' r'",
+                "rot": 0,
+                "noOfMoves": 7
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 7,
+        "shape": "light",
+        "algrtm": [
+            {
+                "moves": "L F R' F R F2 L'",
+                "rot": 0,
+                "noOfMoves": 7
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 8,
+        "shape": "light",
+        "algrtm": [
+            {
+                "moves": "r' U' R U' R' U2 r",
+                "rot": 0,
+                "noOfMoves": 7
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 9,
+        "shape": "fish",
+        "algrtm": [
+            {
+                "moves": "R' U' R y' x' R U' R F R U R'",
+                "rot": 0,
+                "noOfMoves": 12
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 10,
+        "shape": "fish",
+        "algrtm": [
+            {
+                "moves": "L U L' y x L' U L F' L' U' L",
+                "rot": 0,
+                "noOfMoves": 12
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 11,
+        "shape": "light",
+        "algrtm": [
+            {
+                "moves": "F' L' U' L U F U' F' L' U' L U F",
+                "rot": 0,
+                "noOfMoves": 13
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 12,
+        "shape": "light",
+        "algrtm": [
+            {
+                "moves": "U2 r R2 U' R U' R' U2 R U' M",
+                "rot": 0,
+                "noOfMoves": 11
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 13,
+        "shape": "L",
+        "algrtm": [
+            {
+                "moves": "L F' L' U' L F L' y' R' U R",
+                "rot": 0,
+                "noOfMoves": 11
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 14,
+        "shape": "L",
+        "algrtm": [
+            {
+                "moves": "R' F R U R' F' R y L U' L'",
+                "rot": 0,
+                "noOfMoves": 11
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 15,
+        "shape": "L",
+        "algrtm": [
+            {
+                "moves": "L' B' L R' U' R U L' B L",
+                "rot": 0,
+                "noOfMoves": 10
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 16,
+        "shape": "L",
+        "algrtm": [
+            {
+                "moves": "R B R' L U L' U' R B' R'",
+                "rot": 0,
+                "noOfMoves": 10
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 17,
+        "shape": "dot",
+        "algrtm": [
+            {
+                "moves": "R U R' U R' F R F' U2 R' F R F'",
+                "rot": 0,
+                "noOfMoves": 13
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 18,
+        "shape": "dot",
+        "algrtm": [
+            {
+                "moves": "F R U R' d R' U2 R' F R F'",
+                "rot": 0,
+                "noOfMoves": 11
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 19,
+        "shape": "dot",
+        "algrtm": [
+            {
+                "moves": "r' R U (R U R' U') r R2 F R F",
+                "rot": 0,
+                "noOfMoves": 12
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 20,
+        "shape": "dot",
+        "algrtm": [
+            {
+                "moves": "r' R U (R U R' U') r2 R2 U R U' r'",
+                "rot": 0,
+                "noOfMoves": 13
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 21,
+        "shape": "cross",
+        "algrtm": [
+            {
+                "moves": "R U2 R' U' (R U R' U') R U' R'",
+                "rot": 0,
+                "noOfMoves": 11
+            },
+            {
+                "moves": "F (R U R' U') (R U R' U') (R U R' U') F'",
+                "rot": 0,
+                "noOfMoves": 14
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 22,
+        "shape": "cross",
+        "algrtm": [
+            {
+                "moves": "R U2 R2 U' R2 U' R2 U2 R",
+                "rot": 0,
+                "noOfMoves": 9
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 23,
+        "shape": "cross",
+        "algrtm": [
+            {
+                "moves": "R U2 R' B' U R U R' U' B",
+                "rot": 2,
+                "noOfMoves": 10
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 24,
+        "shape": "cross",
+        "algrtm": [
+            {
+                "moves": "r U R' U' r' F R F'",
+                "rot": 0,
+                "noOfMoves": 8
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 25,
+        "shape": "cross",
+        "algrtm": [
+            {
+                "moves": "l' U' L U R U' r' F",
+                "rot": 0,
+                "noOfMoves": 8
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 26,
+        "shape": "cross",
+        "algrtm": [
+            {
+                "moves": "R U2 R' U' R U' R'",
+                "rot": 3,
+                "noOfMoves": 7
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 27,
+        "shape": "cross",
+        "algrtm": [
+            {
+                "moves": "R U R' U R U2 R'",
+                "rot": 0,
+                "noOfMoves": 7
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 28,
+        "shape": "corner",
+        "algrtm": [
+            {
+                "moves": "M' U' M U2 M' U' M",
+                "rot": 0,
+                "noOfMoves": 7
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 29,
+        "shape": "light",
+        "algrtm": [
+            {
+                "moves": "L2 U' L B L' U L2 U' r' U' r",
+                "rot": 0,
+                "noOfMoves": 11
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 30,
+        "shape": "light",
+        "algrtm": [
+            {
+                "moves": "R2 U R' B' R U' R2 U l U l'",
+                "rot": 0,
+                "noOfMoves": 11
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 31,
+        "shape": "P",
+        "algrtm": [
+            {
+                "moves": "R' d' L d R U' R' F' R",
+                "rot": 0,
+                "noOfMoves": 9
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 32,
+        "shape": "P",
+        "algrtm": [
+            {
+                "moves": "L d R' d' L' U L F L'",
+                "rot": 0,
+                "noOfMoves": 9
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 33,
+        "shape": "T",
+        "algrtm": [
+            {
+                "moves": "R U R' U' R' F R F'",
+                "rot": 0,
+                "noOfMoves": 8
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 34,
+        "shape": "C",
+        "algrtm": [
+            {
+                "moves": "R U R2 U' R' F R U R U' F'",
+                "rot": 0,
+                "noOfMoves": 11
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 35,
+        "shape": "fish",
+        "algrtm": [
+            {
+                "moves": "L U2 L2 B L B' L U2 L'",
+                "rot": 0,
+                "noOfMoves": 9
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 36,
+        "shape": "W",
+        "algrtm": [
+            {
+                "moves": "L' U' L U' L' U L U L F' L' F",
+                "rot": 0,
+                "noOfMoves": 12
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 37,
+        "shape": "fish",
+        "algrtm": [
+            {
+                "moves": "F R U' R' U' R U R' U' F'",
+                "rot": 0,
+                "noOfMoves": 10
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 38,
+        "shape": "W",
+        "algrtm": [
+            {
+                "moves": "R U R' U R U' R' U' R' F R F'",
+                "rot": 0,
+                "noOfMoves": 12
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 39,
+        "shape": "Z",
+        "algrtm": [
+            {
+                "moves": "L F' L' U' L U y' R d' L'",
+                "rot": 0,
+                "noOfMoves": 10
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 40,
+        "shape": "Z",
+        "algrtm": [
+            {
+                "moves": "R' F (R U R' U') y L' d R",
+                "rot": 0,
+                "noOfMoves": 10
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 41,
+        "shape": "light",
+        "algrtm": [
+            {
+                "moves": "R U' R' U2 R U y R U' R' U' F'",
+                "rot": 0,
+                "noOfMoves": 12
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 42,
+        "shape": "light",
+        "algrtm": [
+            {
+                "moves": "L' U L U2 L' U' y' L' U L U F",
+                "rot": 0,
+                "noOfMoves": 12
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 43,
+        "shape": "P",
+        "algrtm": [
+            {
+                "moves": "F' U' L' U L F",
+                "rot": 0,
+                "noOfMoves": 6
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 44,
+        "shape": "P",
+        "algrtm": [
+            {
+                "moves": "F U R U' R' F'",
+                "rot": 0,
+                "noOfMoves": 6
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 45,
+        "shape": "T",
+        "algrtm": [
+            {
+                "moves": "F (R U R' U') F'",
+                "rot": 0,
+                "noOfMoves": 6
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 46,
+        "shape": "C",
+        "algrtm": [
+            {
+                "moves": "F' L' U' L y' R U' R' U2 R",
+                "rot": 0,
+                "noOfMoves": 10
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 47,
+        "shape": "miniL",
+        "algrtm": [
+            {
+                "moves": "F' L' U' L U L' U' L U F",
+                "rot": 0,
+                "noOfMoves": 10
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 48,
+        "shape": "miniL",
+        "algrtm": [
+            {
+                "moves": "F (R U R' U') (R U R' U') F'",
+                "rot": 0,
+                "noOfMoves": 10
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 49,
+        "shape": "miniL",
+        "algrtm": [
+            {
+                "moves": "R' F R' F' R2 U2 y R' F R F'",
+                "rot": 0,
+                "noOfMoves": 11
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 50,
+        "shape": "miniL",
+        "algrtm": [
+            {
+                "moves": "R B' R B R2 U2 F R' F' R",
+                "rot": 0,
+                "noOfMoves": 10
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 51,
+        "shape": "line",
+        "algrtm": [
+            {
+                "moves": "f (R U R' U') (R U R' U') f'",
+                "rot": 0,
+                "noOfMoves": 10
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 52,
+        "shape": "line",
+        "algrtm": [
+            {
+                "moves": "R U R' U R d' R U' R' F'",
+                "rot": 0,
+                "noOfMoves": 10
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 53,
+        "shape": "miniL",
+        "algrtm": [
+            {
+                "moves": "r' U' R U' R' U R U' R' U2 r",
+                "rot": 0,
+                "noOfMoves": 11
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 54,
+        "shape": "miniL",
+        "algrtm": [
+            {
+                "moves": "r U R' U R U' R' U R U2 r'",
+                "rot": 0,
+                "noOfMoves": 11
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 55,
+        "shape": "line",
+        "algrtm": [
+            {
+                "moves": "R U' y R2 D R' U2 R D' R2 d R'",
+                "rot": 0,
+                "noOfMoves": 12
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 56,
+        "shape": "line",
+        "algrtm": [
+            {
+                "moves": "F (R U R' U') x R U' L U R' U' r'",
+                "rot": 0,
+                "noOfMoves": 13
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": 57,
+        "shape": "corner",
+        "algrtm": [
+            {
+                "moves": "F (R U R' U') x R U' L U R' U' r'",
+                "rot": 0,
+                "noOfMoves": 13
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    }
+]
