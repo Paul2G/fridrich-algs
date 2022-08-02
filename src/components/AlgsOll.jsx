@@ -104,6 +104,8 @@ export class AlgsOll extends Component {
     this.setState({
       sortBy: sortings[sorter.selectedIndex]
     });
+
+    this.saveSortToLocalStorage();
   }
 
   handleAdd() {
@@ -129,6 +131,8 @@ export class AlgsOll extends Component {
       inputAlg.value = "";
       inputAlgRot.selectedIndex = 0;
     }
+
+    this.saveCasesToLocalStorage();
   }
 
   handleDel (index){
@@ -141,11 +145,15 @@ export class AlgsOll extends Component {
     cases[this.state.selectedCase.id - 1].algrtm.splice(index, 1);
 
     this.setState({});
+
+    this.saveCasesToLocalStorage();
   }
 
   handleSelect (index) {
     cases[this.state.selectedCase.id - 1].selectedAlgrtm = index;
     this.setState({});
+
+    this.saveCasesToLocalStorage();
   }
 
   handleChangeState (index) {
