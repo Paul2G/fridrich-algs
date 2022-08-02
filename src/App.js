@@ -1,5 +1,6 @@
-import { AlgsOll } from "./components/AlgsOll";
+import AlgsOll from "./components/AlgsOll";
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <main className="mainContent">
         <AlgsOll />
       </main>
+      <Footer />
     </div>
   );
 }

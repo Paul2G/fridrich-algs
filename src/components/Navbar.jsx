@@ -10,7 +10,7 @@ export class Navbar extends Component {
                     <img className="site-logo" src={logo}/>
                     <span className="site-name">fridrich-algs</span>
                 </a>
-                <vr/>
+                <div className="vr"/>
                 <nav className="navbar">
                     <a href="#"><span className="navbar-item">OLL</span></a>
                     <a href="#"><span className="navbar-item">PLL</span></a>

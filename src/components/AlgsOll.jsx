@@ -43,6 +43,37 @@ export class AlgsOll extends Component {
     this.handleChangeState = this.handleChangeState.bind(this);
   }
 
+  componentDidMount(){
+    this.loadCasesFromLocalStorage();
+    this.loadSortFromLocalStorage();
+
+    this.setState({});
+  }
+
+  saveCasesToLocalStorage() {
+    localStorage.setItem("allCases", JSON.stringify(cases));
+  }
+
+  saveSortToLocalStorage(){
+    localStorage.setItem("sortBy", this.state.sortBy);
+  }
+
+  loadCasesFromLocalStorage (){
+    var recoveredCases = localStorage.getItem("allCases");
+
+    if(recoveredCases !== null) {
+      cases = JSON.parse(recoveredCases);
+    }
+  }
+
+  loadSortFromLocalStorage(){
+    var recoveredSort = localStorage.getItem("sortBy");
+
+    if(recoveredSort !== null) {
+      this.state.sortBy = recoveredSort;
+    }
+  }
+
   openModalEdit(id){
     this.setState({
       selectedCase: cases.find((caso) => caso.id === id)
@@ -120,6 +151,8 @@ export class AlgsOll extends Component {
   handleChangeState (index) {
     cases[index-1].learningState = (++cases[index-1].learningState)%4 ;
     this.setState({});
+
+    this.saveCasesToLocalStorage();
   }
 
   showCategories(){

@@ -22,11 +22,8 @@ code {
     monospace;
 }
 
-h1 {
-  margin-bottom: 1rem;
-}
-
 h2 {
+  margin-top: 1rem;
   border-bottom: 1px solid gray;
 }
 
@@ -34,19 +31,27 @@ input[type="radio"] {
   cursor: pointer;
 }
 
+input[type="text"]{
+  width: 100%;
+  height: 100%;
+  font-size: medium;
+}
+
 select, option {
   cursor: pointer;
+  font-size: medium;
 }
 
 a {
   text-decoration: none;
 }
 
-vr {
+.vr {
   border: 1px solid gray;
 }
 
 /*-----------------------------------Cajas grandes-----------------------------------------*/
+
 .mainContent {
   background-color: rgba(255, 255, 255, 0.8);
   margin: auto;
@@ -146,7 +151,6 @@ header .navbar .navbar-item:hover {
     flex-direction: column;
   }
 }
-
 
 /*---------------------------------Tarjeta de algoritmo--------------------------------*/
 
@@ -361,6 +365,62 @@ header .navbar .navbar-item:hover {
 .algs-table th, .algs-table td {
   border: 1px solid gray;
   padding: 0.2rem;
+}
+
+/*-----------------------Footer related---------------------------*/
+
+.foot-bar {
+  color: white;
+  background-color: black;
+  border-top: 2px solid gray;
+}
+
+.foot-bar .foot-container {
+  width: 70%;
+  margin: 0 auto;
+
+  display: flex;
+}
+
+.foot-bar .foot-container section {
+  width: 50%;
+  padding: 2rem 3rem;
+}
+
+.foot-bar .foot-container a{
+  color: white;
+  text-decoration: none;
+  padding-left: 1rem;
+}
+
+.foot-bar .foot-container a:hover{
+  color: gray;
+}
+
+.foot-bar .foot-container ul {
+  list-style-type: none;
+}
+
+.foot-bar .foot-container li {
+  padding: 0.25rem 0rem;
+}
+
+@media (max-width: 576px){
+  .foot-bar .foot-container section {
+    padding: 1rem 3rem;
+    width: 100%;
+  }
+
+  .foot-bar .foot-container {
+    display: inline;
+    padding: 1rem 0rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .foot-bar .foot-container {
+    width: 100%;
+  }
 }
 
 /*------------------------Scroll related---------------------------*/
