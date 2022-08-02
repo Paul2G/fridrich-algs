@@ -1,62 +1,16 @@
 [
-	{
-		"id": "cross",
-		"name": "Cruz: 4 Aristas orientadas"
-	},
-	{
-		"id": "dot",
-		"name": "Punto: Sin aristas orientadas"
-	},
-	{
-		"id": "line",
-		"name": "Línea"
-	},
-	{
-		"id": "miniL",
-		"name": "Forma L pequeña"
-	},
-	{
-		"id": "square",
-		"name": "Cuadradado"
-	},
-	{
-		"id": "light",
-		"name": "Relámpago"
-	},
-	{
-		"id": "fish",
-		"name": "Pez"
-	},
-	{
-		"id": "C",
-		"name": "Forma de C"
-	},
-	{
-		"id": "L",
-		"name": "L grande"
-	},
-	{
-		"id": "P",
-		"name": "Forma de P"
-	},
-	{
-		"id": "T",
-		"name": "Forma de T"
-	},
-	{
-		"id": "W",
-		"name": "Forma de W"
-	},
-	{
-		"id": "Z",
-		"name": "Forma de Z"
-	},
-	{
-		"id": "corner",
-		"name": "Menos 2 aristas"
-	},
-	{
-		"id": "done",
-		"name": "Resuelto"
-	}
+	"Cruz: 4 aristas orientadas", 
+	"Punto: Sin aristas orientadas", 
+	"Línea", 
+	"Forma L pequeña", 
+	"Cuadradado", 
+	"Relámpago", 
+	"Forma rara",
+	"Pez", 
+	"Forma de C", 
+	"Forma de L ", 
+	"Forma de P", 
+	"Forma de T", 
+	"Forma de W", 
+	"Menos 2 aristas"
 ]

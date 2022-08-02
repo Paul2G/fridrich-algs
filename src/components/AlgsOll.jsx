@@ -5,8 +5,10 @@ import Modal from "./Modal"
 
 import cases from "../assets/json/cases.json"
 import shapes from "../assets/json/shapes.json"
+import types from "../assets/json/types.json"
 import learningStates from "../assets/json/learningStates.json"
 import auf from "../assets/json/auf.json"
+import sortings from "../assets/json/sortings.json"
 
 let allowedChar = /^(((\(? *[RLUDFBrludfbMSExyz]('|2)?) *( |\)) *)+)*((\(?[RLUDFBrludfbMSExyz]('|2)?\)?\b))/g;
 let allowedMoves = /[RLUDFBrludfbMSExyz]/g;
@@ -16,10 +18,10 @@ export class AlgsOll extends Component {
     super(props);
     
     this.state = {
-      orderBy: "shape",
+      sortBy: "Forma",
       selectedCase: {
         "id": 0,
-        "shape": "done",
+        "shape": 15,
         "algrtm": [
           {
             "moves": "Resuelto",
@@ -28,12 +30,15 @@ export class AlgsOll extends Component {
           }
         ],
         "selectedAlgrtm": 0,
-        "learningState": 0
+        "learningState": 0, 
+        "type": 0
       }
     }
 
     this.openModalEdit = this.openModalEdit.bind(this);
     this.closeModalEdit = this.closeEditModal.bind(this);
+
+    this.handleSort = this.handleSort.bind(this);
     this.handleAdd = this.handleAdd.bind(this);
     this.handleChangeState = this.handleChangeState.bind(this);
   }
@@ -62,6 +67,14 @@ export class AlgsOll extends Component {
     inputAlgRot.selectedIndex = 0;
   }
 
+  handleSort () {
+    var sorter = document.getElementById("sorter");
+
+    this.setState({
+      sortBy: sortings[sorter.selectedIndex]
+    });
+  }
+
   handleAdd() {
     var inputAlg = document.getElementById("inputAlg");
     var inputAlgRot = document.getElementById("inputAlgRot");
@@ -72,7 +85,7 @@ export class AlgsOll extends Component {
       alert("Caracteres invalidos o movimientos unidos. Intente de nuevo."
         +"\nCaracteres permitidos: \"RLUDFBrludfbMSExyz'2( )\".");
     } else {
-      cases[this.state.selectedCase.id].algrtm.push(
+      cases[this.state.selectedCase.id - 1].algrtm.push(
         {
           "moves": newAlg[0],
           "rot": inputAlgRot.selectedIndex,
@@ -89,71 +102,135 @@ export class AlgsOll extends Component {
 
   handleDel (index){
     if(index > this.state.selectedCase.algrtm.length - 2){
-      cases[this.state.selectedCase.id].selectedAlgrtm = 0;
+      cases[this.state.selectedCase.id - 1].selectedAlgrtm = 0;
+    } else {
+      cases[this.state.selectedCase.id - 1].selectedAlgrtm--;
     }
 
-    cases[this.state.selectedCase.id].algrtm.splice(index, 1);
+    cases[this.state.selectedCase.id - 1].algrtm.splice(index, 1);
 
     this.setState({});
   }
 
   handleSelect (index) {
-    cases[this.state.selectedCase.id].selectedAlgrtm = index;
+    cases[this.state.selectedCase.id - 1].selectedAlgrtm = index;
     this.setState({});
-    console.log(cases[this.state.selectedCase.id]);
   }
 
   handleChangeState (index) {
-    cases[index].learningState = (++cases[index].learningState)%4 ;
+    cases[index-1].learningState = (++cases[index-1].learningState)%4 ;
     this.setState({});
   }
 
-  aglsOf(shape){
-    var casos = [];
-
-    cases.forEach( function(caso) {
-        if(shape.id === caso.shape){
-          casos.push(caso);
-        }
-      }
-    )
-
-    return casos;
-  }
-  
   showCategories(){
-    if(this.state.orderBy === "number"){
-      return(
-        <>
-          <h2>Todos</h2>
-          <div className="Algs">
-            {
-              cases.map((caso) =>
-                <AlgCard key={caso.id} openModal={this.openModalEdit} handleChangeState={this.handleChangeState} case={caso} />
-              )
-            }
-          </div>
-        </>
-      );
-
-    } else {
-      return(
-        <>{
-            shapes.map((shape) =>
-              <div key={shape.id} name={shape.id}>
-                <h2>{shape.name}</h2>
-                <div className="Algs">
-                {
-                  this.aglsOf(shape).map((caso) =>
-                    <AlgCard key={caso.id} openModal={this.openModalEdit} handleChangeState={this.handleChangeState} case={caso} />
-                  )
-                }
-                </div>
+    switch(this.state.sortBy){
+      case "Número":
+        return(
+          <>
+            <h2>Todos</h2>
+            <div className="algs">
+              {
+                cases.map((caso) =>
+                  <AlgCard key={caso.id} openModal={this.openModalEdit} handleChangeState={this.handleChangeState} case={caso} />
+                )
+              }
+            </div>
+          </>
+        );
+        break;
+      case "Orientación":
+        return (
+          <>{
+            types.map((type, i) =>
+            <div key={i} className="subsection">
+              <h2>{type}</h2>
+              <div className="algs">
+              {
+                cases.filter((caso) => caso.type === i).map((caso) =>
+                  <AlgCard key={caso.id} openModal={this.openModalEdit} handleChangeState={this.handleChangeState} case={caso} />
+                )
+              }
               </div>
+            </div>
+          )
+          }</>
+        );
+        break;
+      case "Forma":
+        return(
+          <>{
+              shapes.map((shape, i) =>
+                <div key={i} className="subsection">
+                  <h2>{shape}</h2>
+                  <div className="algs">
+                  {
+                    cases.filter((caso) => caso.shape === i).map((caso) =>
+                      <AlgCard key={caso.id} openModal={this.openModalEdit} handleChangeState={this.handleChangeState} case={caso} />
+                    )
+                  }
+                  </div>
+                </div>
+              )
+          }</>
+        );
+        break;
+      case "Largo":
+        var algrtmLength = [0];
+        cases.forEach((caso) => {
+          if(algrtmLength.every((i) => i !== caso.algrtm[caso.selectedAlgrtm].noOfMoves))
+            algrtmLength.push(caso.algrtm[caso.selectedAlgrtm].noOfMoves);
+        });
+        return(
+          <>{
+            algrtmLength.sort(function (a, b) {  return a - b;  }).map((any) => {
+              var casesOf =  cases.filter((caso) => caso.algrtm[caso.selectedAlgrtm].noOfMoves === any);
+              
+              return ( any!==0 &&
+                <div key={any} className="subsection">
+                  <h2>{any} movimientos</h2>
+                  <div className="algs">
+                  {
+                    casesOf.map((caso) =>
+                      <AlgCard key={caso.id} openModal={this.openModalEdit} handleChangeState={this.handleChangeState} case={caso} />
+                    )
+                  }
+                  </div>
+                </div>
+              );
+            }  
             )
-        }</>
-      );
+          }</>
+        );
+        
+        break;
+      case "Conocimiento":
+        return (
+          <>{
+            learningStates.map((learningState, i) => {
+              var casesOf = cases.filter((caso) => caso.learningState === i);
+              
+              return( (casesOf.length !== 0 ) &&
+                <div key={i} className="subsection">
+                  <h2>{learningState}</h2>
+                  <div className="algs">
+                  {
+                    casesOf.map((caso) =>
+                      <AlgCard key={caso.id} openModal={this.openModalEdit} handleChangeState={this.handleChangeState} case={caso} />
+                    )
+                  }
+                  </div>
+                </div>
+              );
+            }
+            )
+          }</>
+        );
+        break;
+      default:
+        break;
     }
+
+    return <noscript>Nada de nada</noscript>
   }
 
   render() {
@@ -161,11 +238,21 @@ export class AlgsOll extends Component {
 
     return (
       <>
+      <div className="title">
         <h1>Algoritmos OLL</h1>
+        <div>
+          <span>Ordenar por: </span>
+          <select onChange={this.handleSort} id="sorter">
+            {sortings.map((sort, i) => 
+              <option key={i} value={i} selected={sort === this.state.sortBy}>{sort}</option>
+            )}
+          </select>
+        </div>
+      </div>
         {this.showCategories()}
 
         <Modal func={this.closeEditModal}>
-          <h3>{"OLL " + caso.id + " - " + shapes.find((shape) => shape.id === caso.shape).name}</h3>
+          <h3>{"OLL " + caso.id + " - " + shapes[caso.shape]}</h3>
           <img className={"case-img "+"rt" + caso.algrtm[caso.selectedAlgrtm].rot} 
             src={require("../assets/images/oll/OLL" + caso.id + ".png")}
             alt={"OLL-" + caso.id} 
@@ -208,7 +295,6 @@ export class AlgsOll extends Component {
             </tr>
 
           </table>
-
 
         </Modal>
 
