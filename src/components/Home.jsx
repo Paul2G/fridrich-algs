@@ -67,7 +67,7 @@ export class Home extends Component {
             <h2>OLL</h2>
             <div className="content">
               <img src={oll} alt="OLL"></img>
-              <p>Lo primero de todo tenemos que resolver las aristas blancas en la parte inferior. O sea resolver una cruz blanca con las aristas colocadas en los centros correctos. Deberías ser capaz de determinar los giros necesarios para completar esta cruz blanca al inspeccionar el cubo.</p>
+              <p>Es el paso en el que debemos resolver la cara amarilla sin hacer coincidir los colores de alrededor. Debes aprender los 57 algoritmos para completar este paso.</p>
             </div>
             <ProgressBar learned={this.state.ollLearned} practicing={0} relearn={0}></ProgressBar>
           </Link>
