@@ -34,6 +34,8 @@ export class Home extends Component {
       pllCases = JSON.parse(recoveredCases);
     }
 
+    document.title = "fridrich-algs | Home"
+
     this.setState({
       ollLearned: ((ollCases.filter((caso) => caso.learningState === 2).length * 100) / 57), 
       pllLearned: ((pllCases.filter((caso) => caso.learningState === 2).length * 100) / 21)

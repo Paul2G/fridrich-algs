@@ -43,6 +43,8 @@ export class AlgsOll extends Component {
   componentDidMount() {
     this.loadCasesFromLocalStorage();
 
+    document.title = "fridrich-algs | OLL"
+
     this.setState({});
   }
 

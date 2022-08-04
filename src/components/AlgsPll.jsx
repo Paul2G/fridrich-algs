@@ -43,6 +43,8 @@ export class AlgsPll extends Component {
   componentDidMount() {
     this.loadCasesFromLocalStorage();
 
+    document.title = "fridrich-algs | PLL"
+
     this.setState({});
   }
 
