@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
+
+import "../assets/navbar.css"
+
 import logo from "../assets/images/logo.png"
 
 export class Navbar extends Component {
@@ -6,14 +10,15 @@ export class Navbar extends Component {
     return (
         <header>
             <div className="navbar-container">
-                <a className="site" href="#">
+                <Link className="site" to="/">
                     <img className="site-logo" src={logo}/>
                     <span className="site-name">fridrich-algs</span>
-                </a>
+                </Link>
                 <div className="vr"/>
                 <nav className="navbar">
-                    <a href="#"><span className="navbar-item">OLL</span></a>
-                    <a href="#"><span className="navbar-item">PLL</span></a>
+                    <Link to="#" disabled><span className="navbar-item" style={{color: "gray"}}>F2L</span></Link>
+                    <Link to="/oll"><span className="navbar-item">OLL</span></Link>
+                    <Link to="/pll"><span className="navbar-item">PLL</span></Link>
                 </nav>
             </div>
         </header>

@@ -4,23 +4,23 @@ import AlgCard from './AlgCard'
 import {Modal, openModal} from "./Modal"
 import ProgressBar from './ProgressBar'
 
-import cases from "../assets/json/ollCases.json"
-import sortings from "../assets/json/ollSortings.json"
-import types from "../assets/json/ollTypes.json"
-import shapes from "../assets/json/ollShapes.json"
+import cases from "../assets/json/pllCases.json"
+import sortings from "../assets/json/pllSortings.json"
+import types from "../assets/json/pllTypes.json"
+import uses from "../assets/json/pllUses.json"
 
 import learningStates from "../assets/json/learningStates.json"
 
-export class AlgsOll extends Component {
-  constructor(props) {
+export class AlgsPll extends Component {
+  constructor(props){
     super(props);
 
     this.state = {
-      sortBy: "shape",
+      sortBy: "use",
 
       selectedCase: {
-        "id": 0,
-        "shape": 15,
+        "id": "Aa",
+        "use": 0,
         "algrtm": [
           {
             "moves": "Resuelto",
@@ -47,11 +47,11 @@ export class AlgsOll extends Component {
   }
 
   saveCasesToLocalStorage() {
-    localStorage.setItem("ollCases", JSON.stringify(cases));
+    localStorage.setItem("pllCases", JSON.stringify(cases));
   }
 
   loadCasesFromLocalStorage() {
-    var recoveredCases = localStorage.getItem("ollCases");
+    var recoveredCases = localStorage.getItem("pllCases");
 
     if (recoveredCases !== null) {
       cases = JSON.parse(recoveredCases);
@@ -75,8 +75,10 @@ export class AlgsOll extends Component {
 
   }
 
-  handleChangeState(index) {
-    cases[index - 1].learningState = (++cases[index - 1].learningState) % 4;
+  handleChangeState(id) {
+    var caso = cases.find((caso) => caso.id === id);
+
+    caso.learningState = (++caso.learningState) % 4;
     this.setState({});
 
     this.saveCasesToLocalStorage();
@@ -84,7 +86,7 @@ export class AlgsOll extends Component {
 
   showCategories() {
     switch (this.state.sortBy) {
-      case "num":
+      case "alfa":
         return (
           <>
             <h2>Todos</h2>
@@ -116,15 +118,15 @@ export class AlgsOll extends Component {
           }</>
         );
         break;
-      case "shape":
+      case "use":
         return (
           <>{
-            shapes.map((shape, i) =>
+            uses.map((use, i) =>
               <div key={i} className="subsection">
-                <h2>{shape}</h2>
+                <h2>{use}</h2>
                 <div className="algs">
                   {
-                    cases.filter((caso) => caso.shape === i).map((caso) =>
+                    cases.filter((caso) => caso.use === i).map((caso) =>
                       <AlgCard key={caso.id} openModal={this.openEditModal} handleChangeState={this.handleChangeState} case={caso} />
                     )
                   }
@@ -144,7 +146,7 @@ export class AlgsOll extends Component {
           <>{
             algrtmLength.sort(function (a, b) { return a - b; }).map((any) => {
               var casesOf = cases.filter((caso) => caso.algrtm[caso.selectedAlgrtm].noOfMoves === any);
-
+              console.log(casesOf);
               return (any !== 0 &&
                 <div key={any} className="subsection">
                   <h2>{any} movimientos</h2>
@@ -189,7 +191,7 @@ export class AlgsOll extends Component {
       case "prob":
         return (
           <>{
-            [54, 108, 216].map((prob) => {
+            [18, 36, 72].map((prob) => {
               var casesOf = cases.filter((caso) => caso.prob === prob);
               return (
                 <div key={prob} className="subsection">
@@ -215,14 +217,14 @@ export class AlgsOll extends Component {
   }
 
   render() {
-    var learned = (cases.filter((caso) => caso.learningState === 2).length * 100) / 57;
-    var practicing = (cases.filter((caso) => caso.learningState === 1).length * 100) / 57;
-    var relearn = (cases.filter((caso) => caso.learningState === 3).length * 100) / 57;
+    var learned = (cases.filter((caso) => caso.learningState === 2).length * 100) / 21;
+    var practicing = (cases.filter((caso) => caso.learningState === 1).length * 100) / 21;
+    var relearn = (cases.filter((caso) => caso.learningState === 3).length * 100) / 21;
 
     return (
       <>
         <div className="title">
-          <h1>Algoritmos OLL</h1>
+          <h1>Algoritmos PLL</h1>
           <div>
             <span>Ordenar por: </span>
             <select onChange={this.handleSort} id="sorter" value={this.state.sortBy}>
@@ -242,11 +244,11 @@ export class AlgsOll extends Component {
           closeModal={this.closeEditModal} 
           reload={() => this.setState({})} 
           changeState = {this.handleChangeState}
-          caso={this.state.selectedCase}
-          save={this.saveCasesToLocalStorage} />
+          caso={this.state.selectedCase} 
+          save={this.saveCasesToLocalStorage}/>
       </>
     )
   }
 }
 
-export default AlgsOll
+export default AlgsPll

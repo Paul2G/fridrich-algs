@@ -1,0 +1,317 @@
+[
+    {
+        "id": "Aa",
+        "type": 0,
+        "prob": 18,
+        "use": 0,
+        "algrtm": [
+            {
+                "moves": "L' B L' F2 L B' L' F2 L2",
+                "rot": 0,
+                "noOfMoves": 9
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "Ab",
+        "type": 0,
+        "prob": 18,
+        "use": 0,
+        "algrtm": [
+            {
+                "moves": "L2 F2 L B L' F2 L B' L",
+                "rot": 0,
+                "noOfMoves": 9
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "E",
+        "type": 1,
+        "prob": 36,
+        "use": 0,
+        "algrtm": [
+            {
+                "moves": "x' R U' R' D R U R' D' R U R' D R U' R' D'",
+                "rot": 0,
+                "noOfMoves": 17
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "F",
+        "type": 3,
+        "prob": 18,
+        "use": 1,
+        "algrtm": [
+            {
+                "moves": "R' U R U' R2 y L' U' L U F L F' L' F2 U'",
+                "rot": 0,
+                "noOfMoves": 16
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "Ga",
+        "type": 6,
+        "prob": 18,
+        "use": 1,
+        "algrtm": [
+            {
+                "moves": "R2 u R' U R' U' R u' R2 y' R' U R",
+                "rot": 0,
+                "noOfMoves": 13
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "Gb",
+        "type": 6,
+        "prob": 18,
+        "use": 1,
+        "algrtm": [
+            {
+                "moves": "R' U' R U D' R2 U R' U R U' R U' R2 D",
+                "rot": 0,
+                "noOfMoves": 15
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "Gc",
+        "type": 6,
+        "prob": 18,
+        "use": 1,
+        "algrtm": [
+            {
+                "moves": "R2 u' R U' R U R' u R2 y R U' R'",
+                "rot": 0,
+                "noOfMoves": 13
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "Gd",
+        "type": 6,
+        "prob": 18,
+        "use": 1,
+        "algrtm": [
+            {
+                "moves": "R U R' U' D R2 U' R U' R' U R' U R2 D'",
+                "rot": 0,
+                "noOfMoves": 15
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "H",
+        "type": 0,
+        "prob": 72,
+        "use": 0,
+        "algrtm": [
+            {
+                "moves": "M2 U' M2 U2 M2 U' M2",
+                "rot": 0,
+                "noOfMoves": 7
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "Ja",
+        "type": 2,
+        "prob": 18,
+        "use": 1,
+        "algrtm": [
+            {
+                "moves": "R' U2 R U R' U2 L U' R U L'",
+                "rot": 0,
+                "noOfMoves": 11
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "Jb",
+        "type": 2,
+        "prob": 18,
+        "use": 1,
+        "algrtm": [
+            {
+                "moves": "R U2 R' U' R U2 L' U R' U' L",
+                "rot": 0,
+                "noOfMoves": 11
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "Na",
+        "type": 5,
+        "prob": 72,
+        "use": 1,
+        "algrtm": [
+            {
+                "moves": "z U R' D R2 U' R D' U R' D R2 U' R D' R",
+                "rot": 0,
+                "noOfMoves": 16
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "Nb",
+        "type": 5,
+        "prob": 72,
+        "use": 1,
+        "algrtm": [
+            {
+                "moves": "z D' R U' R2 D R' U D' R U' R2 D R' U R'",
+                "rot": 0,
+                "noOfMoves": 16
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "Ra",
+        "type": 2,
+        "prob": 18,
+        "use": 1,
+        "algrtm": [
+            {
+                "moves": "R U2 R' U2 R B' R' U' R U R B R2 U",
+                "rot": 0,
+                "noOfMoves": 14
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "Rb",
+        "type": 2,
+        "prob": 18,
+        "use": 1,
+        "algrtm": [
+            {
+                "moves": "R' U2 R U2 R' F R U R' U' R' F' R2 U'",
+                "rot": 0,
+                "noOfMoves": 14
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "T",
+        "type": 3,
+        "prob": 18,
+        "use": 1,
+        "algrtm": [
+            {
+                "moves": "R U R' U' R' F R2 U' R' U' R U R' F'",
+                "rot": 0,
+                "noOfMoves": 14
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "Ua",
+        "type": 1,
+        "prob": 18,
+        "use": 0,
+        "algrtm": [
+            {
+                "moves": "R2 U' R' U' R U R U R U' R",
+                "rot": 0,
+                "noOfMoves": 11
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "Ub",
+        "type": 1,
+        "prob": 18,
+        "use": 0,
+        "algrtm": [
+            {
+                "moves": "R' U R' U' R' U' R' U R U R2",
+                "rot": 0,
+                "noOfMoves": 11
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "V",
+        "type": 4,
+        "prob": 18,
+        "use": 1,
+        "algrtm": [
+            {
+                "moves": "R' U R' U' R D' R' D R' U D' R2 U' R2 D R2",
+                "rot": 0,
+                "noOfMoves": 16
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "Y",
+        "type": 4,
+        "prob": 18,
+        "use": 1,
+        "algrtm": [
+            {
+                "moves": "F R U' R' U' R U R' F' R U R' U' R' F R F'",
+                "rot": 0,
+                "noOfMoves": 17
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    },
+    {
+        "id": "Z",
+        "type": 0,
+        "prob": 36,
+        "use": 0,
+        "algrtm": [
+            {
+                "moves": "M2 U' M2 U' M' U2 M2 U2 M'",
+                "rot": 0,
+                "noOfMoves": 9
+            }
+        ],
+        "selectedAlgrtm": 0,
+        "learningState": 0
+    }
+]

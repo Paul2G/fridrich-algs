@@ -1,0 +1,63 @@
+header {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #090979;
+    border-bottom: 1px solid gray;
+  
+    position: fixed;
+    top: 0;
+    height: 83px;
+    z-index: 100;
+  }
+  
+  header .site {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+  }
+  
+  header .site:hover .site-logo , header .site:hover .site-name {
+    filter: brightness(80%);
+  }
+  
+  header .site .site-logo {
+    width: 50px;
+  }
+  
+  header .site .site-name{
+    color: white;
+    font-size: x-large;
+    margin-left: 1rem;
+  }
+  
+  header .navbar {
+    margin: auto 2rem;
+  }
+  
+  header .navbar-container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+  }
+  
+  header .navbar .navbar-item {
+    color: white;
+    font-size: x-large;
+    margin-right: 1rem;
+  }
+  
+  header .navbar .navbar-item:hover {
+    color: gray;
+  }
+  
+  @media (max-width: 992px) {
+    header .navbar-container {
+      width: 100%;
+    }
+  }
+  
+  @media  (max-width: 576px) {
+    header .site .site-name {
+      display: none
+    }
+  }

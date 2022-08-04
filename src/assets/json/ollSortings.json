@@ -1,0 +1,26 @@
+[
+    {
+        "id": "num", 
+        "name": "Número"
+    }, 
+    {
+        "id": "shape", 
+        "name": "Forma"
+    }, 
+    {
+        "id": "type", 
+        "name": "Piezas a orientar"
+    }, 
+    {
+        "id": "lenght", 
+        "name": "Número de movimientos"
+    }, 
+    {
+        "id": "unknown", 
+        "name": "Desconocidos primero"
+    }, 
+    {
+        "id": "prob", 
+        "name": "Probabilididad"
+    }
+]
