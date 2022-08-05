@@ -274,7 +274,7 @@
         "shape": 1,
         "algrtm": [
             {
-                "moves": "r' R U (R U R' U') r R2 F R F",
+                "moves": "r' R U (R U R' U') r R2 F R F'",
                 "rot": 0,
                 "noOfMoves": 12
             }

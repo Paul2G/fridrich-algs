@@ -4,7 +4,7 @@ import "../assets/modal.css"
 
 import learningStates from "../assets/json/learningStates.json"
 
-let allowedChar = /^(((\(? *[RLUDFBrludfbMSExyz]('|2)?) *( |\)) *)+)*((\(?[RLUDFBrludfbMSExyz]('|2)?\)?\b))/g;
+let allowedChar = /^(((\(? *[RLUDFBrludfbMSExyz]('|2)?) *( |\)) *)+)*((\(?[RLUDFBrludfbMSExyz]('|2)?\)?))/g;
 let allowedMoves = /[RLUDFBrludfbMSExyz]/g;
 
 export class Modal extends React.Component {
