@@ -81,9 +81,9 @@
         "use": 1,
         "algrtm": [
             {
-                "moves": "R' U' R U D' R2 U R' U R U' R U' R2 D",
+                "moves": "R' U' R y R2 u R' U R U' R u' R2",
                 "rot": 0,
-                "noOfMoves": 15
+                "noOfMoves": 13
             }
         ],
         "selectedAlgrtm": 0,
@@ -111,9 +111,9 @@
         "use": 1,
         "algrtm": [
             {
-                "moves": "R U R' U' D R2 U' R U' R' U R' U R2 D'",
+                "moves": "R U R' y' R2 u' R U' R' U R' u R2",
                 "rot": 0,
-                "noOfMoves": 15
+                "noOfMoves": 13
             }
         ],
         "selectedAlgrtm": 0,
@@ -216,7 +216,7 @@
         "use": 1,
         "algrtm": [
             {
-                "moves": "R' U2 R U2 R' F R U R' U' R' F' R2 U'",
+                "moves": "R' U2 R U2 R' F (R U R' U') R' F' R2 U'",
                 "rot": 0,
                 "noOfMoves": 14
             }
@@ -231,7 +231,7 @@
         "use": 1,
         "algrtm": [
             {
-                "moves": "R U R' U' R' F R2 U' R' U' R U R' F'",
+                "moves": "(R U R' U') R' F R2 U' R' U' R U R' F'",
                 "rot": 0,
                 "noOfMoves": 14
             }
@@ -291,7 +291,7 @@
         "use": 1,
         "algrtm": [
             {
-                "moves": "F R U' R' U' R U R' F' R U R' U' R' F R F'",
+                "moves": "F R U' R' U' R U R' F' (R U R' U') R' F R F'",
                 "rot": 0,
                 "noOfMoves": 17
             }

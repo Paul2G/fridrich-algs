@@ -334,7 +334,7 @@
         "shape": 0,
         "algrtm": [
             {
-                "moves": "R U2 R' B' U R U R' U' B",
+                "moves": "R U2 R' B' U (R U R' U') B",
                 "rot": 2,
                 "noOfMoves": 10
             }
@@ -484,7 +484,7 @@
         "shape": 11,
         "algrtm": [
             {
-                "moves": "R U R' U' R' F R F'",
+                "moves": "(R U R' U') R' F R F'",
                 "rot": 0,
                 "noOfMoves": 8
             }
@@ -544,7 +544,7 @@
         "shape": 7,
         "algrtm": [
             {
-                "moves": "F R U' R' U' R U R' U' F'",
+                "moves": "F R U' R' U' (R U R' U') F'",
                 "rot": 0,
                 "noOfMoves": 10
             }
