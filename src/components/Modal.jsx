@@ -16,10 +16,11 @@ export class Modal extends React.Component {
 
   handleAdd() {
     var inputAlg = document.getElementById("inputAlg");
-    var newAlg;
+    var newAlg = allowedChar.exec(inputAlg.value);
 
-    newAlg = allowedChar.exec(inputAlg.value);
-    if (newAlg == null) {
+    allowedChar.exec(inputAlg.value);
+
+    if (newAlg === null) {
       alert("Caracteres invalidos o movimientos unidos. Intente de nuevo."
         + "\nCaracteres permitidos: \"RLUDFBrludfbMSExyz'2( )\".");
     } else {
@@ -31,9 +32,9 @@ export class Modal extends React.Component {
         }
       );
 
-      this.setState({});
-
       inputAlg.value = "";
+
+      this.setState({});
 
       this.props.save();
     }
@@ -41,9 +42,9 @@ export class Modal extends React.Component {
 
   
   handleDel(index) {
-    if (index > this.props.caso.algrtm.length - 2) {
-      this.props.caso.selectedAlgrtm = 0;
-    } else {
+    if (index === this.props.caso.selectedAlgrtm) {
+        this.props.caso.selectedAlgrtm = 0;
+    } else if (index < this.props.caso.selectedAlgrtm){ 
       this.props.caso.selectedAlgrtm--;
     }
 
