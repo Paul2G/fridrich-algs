@@ -77,67 +77,71 @@ export class Modal extends React.Component {
 
     if(caso.shape !== undefined){
       var route = require("../assets/images/oll/OLL"+caso.id+".png");
+      var exRef = "http://algdb.net/puzzle/333/oll/oll"+caso.id;
       var step = "OLL";
     } else {
       var route = require("../assets/images/pll/PLL"+caso.id+".png");
+      var exRef = "http://algdb.net/puzzle/333/PLL/"+caso.id;
       var step = "PLL";
     }
 
     return (
       <div className="modal-container" id="modal_container">
-          <div className="modal">
-            <button type="button" className="close-btn" onClick={closeModal}/>
-            
-            <div className="modal-content">
+        <div className="modal">
+          <button type="button" className="close-btn" onClick={closeModal}/>
+          
+          <div className="modal-content">
+            <a className="case-exRef" href={exRef} target="_blank" title="Ver en AlgDb.net">
               <h3>{step + " " + caso.id}</h3>
-                <img className={"case-img " + "rt" + caso.algrtm[caso.selectedAlgrtm].rot}
-                  src={route}
-                  alt={step+"-" + caso.id}
-                  onClick={() => this.props.changeState(caso.id)} />
-                <span className="over-text">{learningStates[caso.learningState]}</span>
+            </a>
+            <img className={"case-img " + "rt" + caso.algrtm[caso.selectedAlgrtm].rot}
+              src={route}
+              alt={step+"-" + caso.id}
+              onClick={() => this.props.changeState(caso.id)} />
+            <span className="over-text">{learningStates[caso.learningState]}</span>
 
-                <span>Probabilidad: 1/{caso.prob}</span>
-                
-                <table className="algs-table">
+            <span>Probabilidad: 1/{caso.prob}</span>
+            
+            <table className="algs-table">
 
-                  <thead>
-                    <tr>
-                      <th>&#62;</th>
-                      <th>Algoritmo</th>
-                      <th>AUF</th>
-                      <th>Cambios</th>
-                    </tr>
-                  </thead>
+              <thead>
+                <tr>
+                  <th>&#62;</th>
+                  <th>Algoritmo</th>
+                  <th>AUF</th>
+                  <th>Cambios</th>
+                </tr>
+              </thead>
 
-                  <tbody>
-                    {caso.algrtm.map((alg, i) =>
-                      <tr key={i}>
-                        <td>
-                          <input type="radio" name="optRadio" onChange={() => this.handleSelect(i)} checked={caso.selectedAlgrtm === i} />
-                        </td>
-                        <td>{alg.moves}</td>
-                        <td>
-                          <button type="button" className="rotate-button" onClick={() => this.handleRotate(i)}/>
-                        </td>
-                        <td>
-                          <button className="del-button" type="button" onClick={() => this.handleDel(i)} disabled={caso.algrtm.length === 1}>Eliminar</button>
-                        </td>
-                      </tr>
-                    )}
+              <tbody>
+                {caso.algrtm.map((alg, i) =>
+                  <tr key={i}>
+                    <td>
+                      <input type="radio" name="optRadio" onChange={() => this.handleSelect(i)} checked={caso.selectedAlgrtm === i} />
+                    </td>
+                    <td>{alg.moves}</td>
+                    <td>
+                      <button type="button" className="rotate-button" onClick={() => this.handleRotate(i)}/>
+                    </td>
+                    <td>
+                      <button className="del-button" type="button" onClick={() => this.handleDel(i)} disabled={caso.algrtm.length === 1}>Eliminar</button>
+                    </td>
+                  </tr>
+                )}
 
-                    <tr>
-                      <td></td>
-                      <td><input id="inputAlg" type="text" placeholder="Escriba aqui..."></input></td>
-                      <td></td>
-                      <td>
-                        <button className="add-button" type="button" onClick={this.handleAdd}>Agregar</button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <tr>
+                  <td></td>
+                  <td><input id="inputAlg" type="text" placeholder=" Nuevo algoritmo..."></input></td>
+                  <td></td>
+                  <td>
+                    <button className="add-button" type="button" onClick={this.handleAdd}>Agregar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-              </div>
           </div>
+        </div>
       </div>
     )
   }

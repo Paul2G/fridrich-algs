@@ -39,6 +39,18 @@ input[type="text"]{
   width: 100%;
   height: 100%;
   font-size: medium;
+
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+input[type="text"]:focus{
+  border-color: blue;
+  outline: none;
+}
+
+input[type="text"]:after{
+  content: 'a';
 }
 
 select, option {
@@ -48,6 +60,7 @@ select, option {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 .vr {

@@ -1,7 +1,7 @@
 [
     {
         "id": "Aa",
-        "type": 0,
+        "type": 1,
         "prob": 18,
         "use": 0,
         "algrtm": [
@@ -16,7 +16,7 @@
     },
     {
         "id": "Ab",
-        "type": 0,
+        "type": 1,
         "prob": 18,
         "use": 0,
         "algrtm": [
@@ -241,7 +241,7 @@
     },
     {
         "id": "Ua",
-        "type": 1,
+        "type": 0,
         "prob": 18,
         "use": 0,
         "algrtm": [
@@ -256,7 +256,7 @@
     },
     {
         "id": "Ub",
-        "type": 1,
+        "type": 0,
         "prob": 18,
         "use": 0,
         "algrtm": [
