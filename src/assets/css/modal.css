@@ -1,0 +1,55 @@
+.modal-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.25);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+
+  transition: all ease 300ms;
+}
+
+.modal {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px gray;
+
+  width: 600px;
+  max-width: 100%;
+  padding: 30px 50px;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.modal .close-btn {
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: larger;
+
+  height: 0px;
+  position: relative;
+  top: -5px;
+  left: 53%;
+}
+
+.modal .close-btn::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='currentColor' class='bi bi-x-lg' viewBox='0 0 16 16'%3E%3Cpath d='M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z'/%3E%3C/svg%3E");
+}

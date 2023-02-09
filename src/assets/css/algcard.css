@@ -22,9 +22,8 @@
     width: 16px;
     
     position: relative;
-    top: 10px;
-    left: 60px;
-    
+    top: 12px;
+    left: 55px;
   }
   
   .alg-card .editBtn::before {
@@ -65,4 +64,6 @@
     position: relative;
     top: -4rem;
   }
+
+   
   

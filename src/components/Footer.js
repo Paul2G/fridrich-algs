@@ -1,13 +1,13 @@
 import React from 'react'
 
-import "../assets/footbar.css"
+import "../assets/css/footbar.css"
 
-function Footer() {
+export default function Footer() {
   return (
     <footer className="foot-bar">
         <div className="foot-container">
             <section>
-                <h4>Enlaces de interés</h4> 
+                <h4>Sitios relacionados</h4> 
                 <ul>
                     <li>
                         <a href="http://algdb.net/" target="_blank">AlgDb.net Beta</a>   
@@ -21,12 +21,10 @@ function Footer() {
                 </ul>
              </section>
             <section>
-                <span><strong>fridrich-algs</strong> fue creado por Paul Garcia y licenciado por nadie.</span>
+                <span><strong>fridrich-algs</strong>. Creado por Paul Garcia</span>
 
            </section>
         </div>
     </footer>
   )
 }
-
-export default Footer

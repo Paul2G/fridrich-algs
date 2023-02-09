@@ -1,0 +1,85 @@
+#login_modal .modal{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#login_modal .close-btn {
+    top: -25px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    min-width: 250px;
+}
+
+.login-form input {
+    font-size: 16px;
+    padding: 8px 16px 8px 36px;
+    border-radius: 16px;
+    border: 1px solid gray;
+    margin-top: 16px;
+}
+
+.login-form input.error {
+    border-color: red;
+}
+
+.login-form input.error:focus {
+    outline: 2px solid red;
+}
+
+.login-form label {
+    text-align: left;
+    height: 0px;
+    position: relative;
+    top: 22px;
+    left: 12px;
+    font-size: 20px;
+    cursor: text;
+}
+
+.login-form a{
+    width: fit-content;
+    cursor: pointer;
+    font-style: italic;
+    font-size: 16;
+    margin-top: 8px;
+    text-align: left;
+}
+
+.login-form a:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
+.login-form span.error {
+    text-align: left;
+    font-size: 12px;
+    padding-left: 12px;
+    color: red;
+}
+
+.login-form button {
+    cursor: pointer;
+    margin: auto;
+    margin-top: 16px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px lightgrey;
+
+    border: 1px solid transparent;
+    color: white;
+    background-color: var(--primary-color);
+
+    transition: all ease 200ms;
+}
+
+.login-form button:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+

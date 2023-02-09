@@ -1,0 +1,22 @@
+{
+    "oll": [
+        "Cruz: 4 aristas orientadas", 
+        "Punto: Sin aristas orientadas", 
+        "Línea", 
+        "Forma L", 
+        "Cuadradado", 
+        "Relámpago", 
+        "Forma rara",
+        "Pez", 
+        "Forma de C", 
+        "Caballo de ajedrez", 
+        "Forma de P", 
+        "Forma de T", 
+        "Forma de W", 
+        "Menos 2 aristas"
+    ],
+    "pll": [
+        "Básico: Fridrich reducido", 
+        "Avanzado: Fridrich completo"
+    ]
+}

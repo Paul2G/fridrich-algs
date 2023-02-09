@@ -1,29 +1,35 @@
-import { HashRouter,Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
+import { ModalContextProvider } from './behaviour/ModalContext.js';
 
-import Home from "./components/Home"
-import AlgsOll from "./components/AlgsOll";
-import AlgsPll from "./components/AlgsPll"
+import Navbar from "./components/Navbar.js";
+import Footer from "./components/Footer.js";
+
+import Home from "./pages/Home.js";
+import AlgsPage from "./pages/AlgsPage.js";
+import Error404 from "./pages/Error404.js";
 
 function App() {
   return (
     <div className="App">
-      <HashRouter>
+      <Router>
+        <ModalContextProvider>
         <Navbar />
-        
+
         <main className="mainContent">
           <Routes>
-            <Route exact path="/" element={<Home/>} />
+            <Route path="/" element={<Home />} />
 
-            <Route exact path="/oll" element={<AlgsOll />} />
-            <Route exact path="/pll" element={<AlgsPll />} />
+            <Route path="/oll" element={<AlgsPage lastLayerStep="oll" />}/>
+            <Route path="/pll" element={<AlgsPage lastLayerStep="pll" />}/>
+            <Route path="*" element={<Error404 />} />
           </Routes>
         </main>
-        
+
         <Footer />
-      </HashRouter>
+        </ModalContextProvider>
+      </Router>
     </div>
   );
 }

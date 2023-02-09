@@ -1,0 +1,172 @@
+header {
+  width: 100%;
+  padding: 16px 0px;
+  background-color: var(--primary-color);
+  border-bottom: 1px solid gray;
+
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+header .navbar-container {
+  width: 100%;
+  max-width: 1340px;
+
+  margin: auto;
+  padding: 0px 16px;
+  display: flex;
+}
+
+header .site {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+header .site:hover .site-logo , header .site:hover .site-name {
+  filter: brightness(80%);
+}
+
+header .site .site-logo {
+  width: 50px;
+}
+
+header .site .site-name{
+  width: 125px;
+  color: white;
+  font-size: x-large;
+  margin-left: 1rem;
+}
+
+header #hamburgerMenu {
+  display: none;
+}
+
+header .hamburger-btn {
+  display: none;
+  position: absolute;
+  top: 28px;
+  right: 24px;
+
+  font-size: 32px;
+  color: white;
+}
+
+header .navbar {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-left: 32px;
+}
+
+header .navbar ul {
+  list-style: none;
+}
+
+header .navbar ul li {
+  display: inline;
+  margin-right: 16px;
+}
+
+
+header .navbar .navbar-item {
+  color: white;
+  font-size: x-large;
+}
+
+header .navbar .navbar-item:hover {
+  color: gray;
+}
+
+header .navbar .navbar-item[disabled]{
+  cursor: default;
+  color: rgb(71, 71, 71);
+  text-decoration: line-through gray 1px;
+}
+
+header .login-button {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  padding: 4px 16px;
+
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 16px;
+
+  transition: all ease 300ms;
+}
+
+header .login-button:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+header .login-button i {
+  margin-left: 4px;
+  font-size: 20px;
+
+  display: flex;
+}
+
+/*---------------------Medias----------------------*/
+@media  (max-width: 664px) {
+  header .site .site-name {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  header .navbar-container {
+    flex-direction: column;
+  }
+
+  header .site .site-name {
+    display: block;
+  }
+
+  header .hamburger-btn {
+    display: flex;
+  }
+
+  header .navbar{
+    flex-direction: column;
+    margin-left: 0px;
+    height: 0px;
+
+    overflow: hidden;
+
+    transition: all ease 300ms;
+  }
+
+  header .navbar ul{
+    margin-top: 16px;
+  }
+
+  header .navbar ul li{
+    display: block;
+    margin-right: 0px;
+    margin-bottom: 5px;
+  }
+
+  header .navbar-container .vr {
+    display: none;
+  }
+
+  header #hamburgerMenu:checked ~ .navbar {
+    height: 170px;
+  }
+}
+
+@media  (max-width: 290px) {
+  header .site .site-name {
+    display: none;
+  }
+}

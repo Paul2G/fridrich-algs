@@ -1,0 +1,55 @@
+{
+    "oll": [
+        {
+            "id": "alfanum", 
+            "name": "Número"
+        }, 
+        {
+            "id": "type", 
+            "name": "Forma"
+        }, 
+        {
+            "id": "complex", 
+            "name": "Piezas orientadas"
+        }, 
+        {
+            "id": "noOfMoves", 
+            "name": "Número de movimientos"
+        }, 
+        {
+            "id": "learningState", 
+            "name": "Desconocidos primero"
+        }, 
+        {
+            "id": "prob", 
+            "name": "Probabilididad"
+        }
+    ],
+    "pll": [
+        {
+            "id": "alfanum", 
+            "name": "Alfabéticamente"
+        }, 
+        {
+            "id": "type", 
+            "name": "Usabilidad"
+        },
+        {
+            "id": "complex", 
+            "name": "Piezas a permutar"
+        }, 
+        {
+            "id": "noOfMoves", 
+            "name": "Número de movimientos"
+        }, 
+        {
+            "id": "learningState", 
+            "name": "Desconocidos primero"
+        }, 
+        {
+            "id": "prob", 
+            "name": "Probabilidad"
+        }
+    ]
+}
+

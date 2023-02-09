@@ -2,6 +2,7 @@
 
 :root {
   --navbar-offset: 83px;
+  --primary-color: #090979;
 }
 
 *{
@@ -15,7 +16,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: rgb(209,179,255);
   background: radial-gradient(circle, rgba(209,179,255,1) 0%, rgba(160,212,255,1) 100%);
   
   overflow: overlay;
@@ -26,31 +26,8 @@ code {
     monospace;
 }
 
-h2 {
-  margin-top: 1rem;
-  border-bottom: 1px solid gray;
-}
-
 input[type="radio"] {
   cursor: pointer;
-}
-
-input[type="text"]{
-  width: 100%;
-  height: 100%;
-  font-size: medium;
-
-  border: none;
-  border-bottom: 1px solid gray;
-}
-
-input[type="text"]:focus{
-  border-color: blue;
-  outline: none;
-}
-
-input[type="text"]:after{
-  content: 'a';
 }
 
 select, option {
@@ -75,29 +52,30 @@ a {
 
   margin: auto;
   padding: 2rem 2rem;
-  width: 70%;
+  width: 100%;
+  max-width: 1340px;
 
   margin-top: var(--navbar-offset);
 }
 
-@media (max-width: 992px) {
-  .mainContent {
-    width: 100%;
-  }
-}
-
 /*----------------------------title------------------------------------*/
 
-.title {
+.content-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
 
-.title > div {
+.content-header .sort-selector {
   margin-top: auto;
 }
+
+.subsection h2 {
+  margin-top: 1rem;
+  border-bottom: 1px solid gray;
+}
+
 
 .algs {
   justify-content: center;
@@ -106,7 +84,7 @@ a {
 }
 
 @media (max-width: 576px){
-  .title {
+  .content-header {
     flex-direction: column;
   }
 }
@@ -118,32 +96,27 @@ a {
   margin: 10px 10px;
   width: 90px;
   color: black;
-  transition: 0.1s;
+  transition: all ease 0.2s;
 }
 
 .case-img:hover{
   filter: brightness(60%);
-  transition: 0.1s;
 }
 
 .case-img.rt0 {
   transform: rotate(0deg);
-  transition: 0.2s;
 }
 
 .case-img.rt1 {
   transform: rotate(90deg);
-  transition: 0.2s;
 }
 
 .case-img.rt2 {
   transform: rotate(180deg);
-  transition: 0.2s;
 }
 
 .case-img.rt3 {
   transform: rotate(270deg);
-  transition: 0.2s;
 }
 
 .over-text{
@@ -182,10 +155,10 @@ body::-webkit-scrollbar:horizontal {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #707070;
+  background-color: #8e8e8e;
   border-radius: 20px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background-color: #505050;
+  background-color: #777;
 }

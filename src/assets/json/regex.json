@@ -1,0 +1,34 @@
+{
+    "allowedAlgrtm": {
+        "regex": "^(((\\(? *[RLUDFBrludfbMSExyz]('|2)?) *( |\\)) *)+)*((\\(?[RLUDFBrludfbMSExyz]('|2)?\\)?))", 
+        "error": "Caracteres invalidos o movimientos unidos. Intente de nuevo. \nCaracteres permitidos: \"RLUDFBrludfbMSExyz'2( )\"."
+    },
+    "allowedMoves": {
+        "regex": "[RLUDFBrludfbMSExyz]", 
+        "error": ""
+    },
+    "username": [
+        {
+            "regex": "^[a-zA-Z]+.*$",
+            "error": "El nombre de usuario debe iniciar con una letra"
+        },
+        {
+            "regex": "^.{5,}$", 
+            "error": "El nombre de usuario debe contener mas de 5 caracteres"
+        },
+        {
+            "regex": "^[a-zA-Z\\d]*$", 
+            "error": "El nombre de usuario solo puede contener letras y números"
+        }
+    ], 
+    "password": [
+        {
+            "regex": "^.{8,16}$",
+            "error": "La contraseña debe contener entre 8 y 16 caracteres"
+        }, 
+        {
+            "regex": "^[\\w\\S]*$", 
+            "error": "La contraseña no debe contener espacios"
+        }
+    ]
+}
